@@ -14,17 +14,13 @@ library(ggplot2)
 ```{r}
 gapminder<-read.csv("https://stat.duke.edu/~mc301/data/gapminder.csv")
 ```
-Filter for 2007
+Filter for 1952
 ```{r}
 gap07<-gapminder%>%
-filter(year==2007)
+filter(year==1952)
 ```
 Graphed data
 ```{r}
-qplot(x=gdpPercap, y=lifeExp, data=gap07)
+qplot(x=pop, y=lifeExp, data=gap07)
+qplot(x=pop, y=lifeExp, color=continent, size=gdpPercap, data=gap07)
 ```
-
-
-
-
-
