@@ -1,0 +1,30 @@
+---
+title: "demo_document"
+author: "Matthew Nelson"
+date: "8/27/2015"
+output: html_document
+---
+load the dplyr and ggplot2 packages for daya wrangling visualization
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+gapminder<-read.csv("https://stat.duke.edu/~mc301/data/gapminder.csv")
+```
+Filter for 2007
+```{r}
+gap07<-gapminder%>%
+filter(year==2007)
+```
+Graphed data
+```{r}
+qplot(x=gdpPercap, y=lifeExp, data=gap07)
+```
+
+
+
+
+
